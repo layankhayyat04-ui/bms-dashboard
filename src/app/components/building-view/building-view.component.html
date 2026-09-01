@@ -1,0 +1,44 @@
+<div class="building-view">
+  <svg
+    [attr.viewBox]="'0 0 220 ' + (floors.length * (floorHeight + floorGap) + 20)"
+  >
+    <!-- one <rect> (rectangle) per floor, colored by its live status -->
+    @for (floor of floors; track floor.id; let i = $index) {
+      <g
+        class="floor"
+        [class]="floor.status"
+        [class.selected]="selectedFloor()?.id === floor.id"
+        (click)="selectFloor(floor)"
+      >
+        <rect
+          x="10"
+          [attr.y]="10 + i * (floorHeight + floorGap)"
+          width="200"
+          [attr.height]="floorHeight"
+          rx="6"
+        />
+        <text
+          x="20"
+          [attr.y]="10 + i * (floorHeight + floorGap) + floorHeight / 2 + 5"
+        >
+          {{ floor.label }}
+        </text>
+        <text
+          class="temp-label"
+          x="190"
+          text-anchor="end"
+          [attr.y]="10 + i * (floorHeight + floorGap) + floorHeight / 2 + 5"
+        >
+          {{ floor.temperature }}&deg;C
+        </text>
+      </g>
+    }
+  </svg>
+
+  @if (selectedFloor(); as floor) {
+    <div class="floor-detail">
+      Selected: <strong>{{ floor.label }}</strong> &mdash; status:
+      <span [class]="'status-pill ' + floor.status">{{ floor.status }}</span>
+    </div>
+  }
+</div>

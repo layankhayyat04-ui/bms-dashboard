@@ -1,0 +1,25 @@
+<div class="gauge" [class]="statusClass()">
+  <svg viewBox="0 0 120 120">
+    <!-- background track -->
+    <circle
+      class="track"
+      cx="60"
+      cy="60"
+      [attr.r]="radius"
+    />
+    <!-- foreground arc, its length driven by the live value -->
+    <circle
+      class="fill"
+      cx="60"
+      cy="60"
+      [attr.r]="radius"
+      [style.strokeDasharray]="circumference"
+      [style.strokeDashoffset]="dashOffset()"
+    />
+  </svg>
+  <div class="gauge-readout">
+    <span class="gauge-value">{{ value | number: '1.0-1' }}</span>
+    <span class="gauge-unit">{{ unit }}</span>
+  </div>
+  <div class="gauge-label">{{ label }}</div>
+</div>

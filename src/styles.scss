@@ -1,0 +1,21 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #0b1120;
+  color: #e8edf4;
+  font-family: 'Inter', 'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  color: #e8edf4;
+}

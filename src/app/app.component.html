@@ -1,0 +1,79 @@
+<div class="app-shell">
+  <app-header />
+
+  <div class="app-body">
+    <app-sidebar />
+
+    <main class="app-main">
+      @if (currentReading$ | async; as reading) {
+        <section class="gauges">
+          <app-gauge
+            [value]="reading.temperature"
+            [min]="15"
+            [max]="35"
+            label="Temperature"
+            unit="&deg;C"
+            [warnAt]="70"
+            [alertAt]="85"
+          />
+          <app-gauge
+            [value]="reading.energyUsage"
+            [min]="0"
+            [max]="120"
+            label="Energy Usage"
+            unit="kW"
+            [warnAt]="65"
+            [alertAt]="85"
+          />
+          <app-gauge
+            [value]="reading.occupancy"
+            [min]="0"
+            [max]="100"
+            label="Occupancy"
+            unit="%"
+            [warnAt]="80"
+            [alertAt]="95"
+          />
+          <app-gauge
+            [value]="reading.airQuality"
+            [min]="0"
+            [max]="100"
+            label="Air Quality"
+            unit="AQI"
+            [warnAt]="200"
+            [alertAt]="220"
+          />
+        </section>
+      }
+
+      <section class="lower-panels">
+        <div class="panel building-panel">
+          <h2>Building Overview</h2>
+          @if (floorStatuses$ | async; as floors) {
+            <app-building-view [floors]="floors" />
+          }
+        </div>
+
+        <div class="panel trends-panel">
+          <h2>Trends</h2>
+          @if (history$ | async; as history) {
+            <div class="trend-grid">
+              <app-trend-chart
+                [history]="history"
+                field="temperature"
+                label="Temperature (&deg;C)"
+                color="#3ddc97"
+              />
+              <app-trend-chart
+                [history]="history"
+                field="energyUsage"
+                label="Energy Usage (kW)"
+                color="#f5b642"
+              />
+            </div>
+          }
+        </div>
+      </section>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+.building-view {
+  svg {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .floor {
+    cursor: pointer;
+
+    rect {
+      fill: #1c283d;
+      stroke: #2f4162;
+      stroke-width: 1.5;
+      transition: fill 0.3s ease, stroke 0.3s ease;
+    }
+
+    text {
+      fill: #d9e2f1;
+      font-size: 12px;
+      font-family: inherit;
+    }
+
+    .temp-label {
+      fill: #8b9bb4;
+    }
+
+    &.warning rect {
+      fill: #3a3320;
+      stroke: #f5b642;
+    }
+
+    &.alert rect {
+      fill: #3a2028;
+      stroke: #ef5675;
+    }
+
+    &.selected rect {
+      stroke-width: 3;
+    }
+
+    &:hover rect {
+      stroke-width: 2.5;
+    }
+  }
+
+  .floor-detail {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #c3cee0;
+  }
+
+  .status-pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+
+    &.normal {
+      background: rgba(61, 220, 151, 0.15);
+      color: #3ddc97;
+    }
+
+    &.warning {
+      background: rgba(245, 182, 66, 0.15);
+      color: #f5b642;
+    }
+
+    &.alert {
+      background: rgba(239, 83, 117, 0.15);
+      color: #ef5675;
+    }
+  }
+}

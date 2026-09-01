@@ -1,0 +1,42 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 12px;
+  background: #0f1626;
+  border-right: 1px solid #22314a;
+  width: 84px;
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    color: #8b9bb4;
+    padding: 12px 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background: #17213380;
+      color: #c3cee0;
+    }
+
+    &.active {
+      background: rgba(61, 220, 151, 0.12);
+      color: #3ddc97;
+    }
+  }
+
+  .nav-icon {
+    font-size: 1.2rem;
+  }
+
+  .nav-label {
+    font-size: 0.65rem;
+  }
+}
