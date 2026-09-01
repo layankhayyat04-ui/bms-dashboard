@@ -1,63 +1,34 @@
-# BmsDashboard
+# Mentra-lite — Building Management Dashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.27.
+A live Building Management System (BMS) dashboard built in Angular, simulating real-time monitoring for a smart building: temperature, energy usage, occupancy, and air quality, plus per-floor status and historical trend charts.
 
-## Development server
+**Live demo:** https://bms-dashboard-4xm.pages.dev
 
-To start a local development server, run:
+## Features
 
-```bash
-ng serve
-```
+- Real-time gauge widgets (temperature, energy usage, occupancy, air quality) with color-coded status thresholds
+- Interactive building/floor overview with live per-floor readings
+- Historical trend charts for temperature and energy usage
+- Custom SVG-based gauges and building visualizations, built from scratch (no charting library)
+- Simulated live data stream via an RxJS-driven data service, mimicking a real BMS/IoT sensor feed
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tech Stack
 
-## Code scaffolding
+- **Angular** (standalone components, reactive signals, dependency injection)
+- **TypeScript**
+- **RxJS** for the live data service
+- **SVG** for custom gauge and floor visualizations
+- **SCSS** for styling
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Architecture
 
-```bash
-ng generate component component-name
-```
+The dashboard is structured around a central data service that emits simulated sensor readings on an interval, consumed reactively by the gauge, building-overview, and trend-chart components. Each widget is a standalone, reusable component that reacts to the shared data stream through dependency injection, keeping the UI in sync in real time as readings change.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Running Locally
 
 ```bash
-ng build
+npm install
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
-## Live Demo
-
-Deployed on Cloudflare Pages: https://bms-dashboard-4xm.pages.dev
+Then open `http://localhost:4200/`.
