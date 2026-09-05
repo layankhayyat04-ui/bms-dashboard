@@ -1,11 +1,46 @@
-<svg width="1000" height="200" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="220" viewBox="0 0 1000 220" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a1a2e"/>
-      <stop offset="100%" stop-color="#16213e"/>
+      <stop offset="0%" stop-color="#1a1a2e">
+        <animate attributeName="stop-color" values="#1a1a2e;#20203a;#1a1a2e" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#16213e">
+        <animate attributeName="stop-color" values="#16213e;#1d2c52;#16213e" dur="6s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="1000" height="200" fill="url(#bg)"/>
-  <text x="500" y="95" font-family="Fira Code, monospace" font-size="38" font-weight="700" fill="#ffffff" text-anchor="middle">Mentra-lite</text>
-  <text x="500" y="130" font-family="Fira Code, monospace" font-size="15" fill="#9fa8da" text-anchor="middle">Live Building Management Dashboard · Angular</text>
+  <rect width="1000" height="220" fill="url(#bg)"/>
+
+  <g transform="translate(60,40)">
+    <rect x="0" y="40" width="70" height="140" fill="#0d1424" stroke="#3a4a7a" stroke-width="1"/>
+    <g fill="#F2C811">
+      <rect x="10" y="55" width="12" height="12"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite"/></rect>
+      <rect x="30" y="55" width="12" height="12"><animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/></rect>
+      <rect x="50" y="55" width="12" height="12"><animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/></rect>
+      <rect x="10" y="80" width="12" height="12"><animate attributeName="opacity" values="1;0.3;1" dur="2.6s" repeatCount="indefinite"/></rect>
+      <rect x="30" y="80" width="12" height="12"><animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/></rect>
+      <rect x="50" y="80" width="12" height="12"><animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/></rect>
+      <rect x="10" y="105" width="12" height="12"><animate attributeName="opacity" values="0.3;1;0.3" dur="1.6s" repeatCount="indefinite"/></rect>
+      <rect x="30" y="105" width="12" height="12"><animate attributeName="opacity" values="1;0.3;1" dur="2.8s" repeatCount="indefinite"/></rect>
+      <rect x="50" y="105" width="12" height="12"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite"/></rect>
+    </g>
+  </g>
+
+  <g transform="translate(230,110)" filter="url(#glow)">
+    <circle r="42" fill="none" stroke="#3a4a7a" stroke-width="3"/>
+    <circle r="42" fill="none" stroke="#00D9FF" stroke-width="3" stroke-dasharray="66 198" stroke-linecap="round">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="4" fill="#ffffff"/>
+  </g>
+
+  <text x="330" y="95" font-family="Fira Code, monospace" font-size="38" font-weight="700" fill="#ffffff">Mentra-lite</text>
+  <text x="330" y="130" font-family="Fira Code, monospace" font-size="16" fill="#9fa8da">Live Building Management Dashboard · Angular</text>
+  <rect x="330" y="145" width="0" height="3" rx="1.5" fill="#9fa8da">
+    <animate attributeName="width" values="0;300;300" dur="1.4s" fill="freeze"/>
+  </rect>
 </svg>
