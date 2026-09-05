@@ -1,4 +1,4 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:16213e&height=180&section=header&text=Mentra-lite&fontSize=36&fontColor=ffffff&animation=fadeIn&fontAlignY=40&desc=Live%20Building%20Management%20Dashboard%20%C2%B7%20Angular&descAlignY=62&descSize=15" />
+<img width="100%" src="https://raw.githubusercontent.com/layankhayyat04-ui/bms-dashboard/main/assets/banner.svg" alt="banner"/>
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-active-16213e?style=for-the-badge"/>
@@ -24,7 +24,9 @@ A live Building Management System (BMS) dashboard built in Angular, simulating r
 ### 🛠️ Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=angular,ts,rxjs,sass&theme=light" />
+<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"></code>&nbsp;
+<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"></code>&nbsp;
+<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png"></code>
 </p>
 
 | | |
@@ -47,5 +49,3 @@ npm start
 ```
 
 Then open `http://localhost:4200/`.
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,100:1a1a2e&height=80&section=footer" />
