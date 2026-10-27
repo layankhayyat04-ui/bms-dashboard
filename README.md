@@ -6,7 +6,8 @@
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
   <img src="https://img.shields.io/badge/RxJS-B7178C?style=for-the-badge&logo=reactivex&logoColor=white"/>
   <br/>
-  <a href="https://bms-dashboard-ochre.vercel.app"><img src="https://img.shields.io/badge/🔴_LIVE_DEMO-16213e?style=for-the-badge"/></a>
+  <a href="https://bms-dashboard-4xm.pages.dev
+"><img src="https://img.shields.io/badge/🔴_LIVE_DEMO-16213e?style=for-the-badge"/></a>
 </p>
 
 A live Building Management System (BMS) dashboard built in Angular, simulating real-time monitoring for a smart building: temperature, energy usage, occupancy, and air quality, plus per-floor status and historical trend charts.
